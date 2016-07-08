@@ -15,9 +15,8 @@ i called this package `noisy` is because the other eslint plugins for fis all si
 ```
 // fis-conf.js
 
-
 // this will use eslintrc file  (Recommended)
-fis.match('*.html', {
+fis.match('*.js', {
   lint: fis.plugin('eslint-noisy')
 });
 
@@ -27,7 +26,7 @@ var eslintConf = {
   // ... rules
 };
 
-fis.match('*.html', {
+fis.match('*.js', {
   lint: fis.plugin('eslint-noisy', eslintConf)
 });
 ```
