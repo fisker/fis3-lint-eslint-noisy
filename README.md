@@ -15,24 +15,31 @@ i called this package `noisy` is because the other eslint plugins for fis all si
 ```
 // fis-conf.js
 
-// config with .eslintrc.* file  (Recommended)
 var eslintConf = {}; 
-
-fis.match('*.js', {
-  lint: fis.plugin('eslint-noisy', {})
-});
-
-
-// config with inline rules
-var eslintConf = {
-  // ... rules
-};
 
 fis.match('*.js', {
   lint: fis.plugin('eslint-noisy', eslintConf)
 });
+
 ```
-[more options](http://eslint.org/docs/rules/)
+
+## about eslintConf
+eslintConf will pass througth eslint `CLIEngine` constructor, available options are list here: [http://eslint.org/docs/developer-guide/nodejs-api#cliengine](http://eslint.org/docs/developer-guide/nodejs-api#cliengine)
+
+this is changed in v0.2.0, by this change we can automatically fix some js codestyles by eslint.
+```
+// fis-conf.js
+
+var exampleEslintConfToFixJs = {
+  fix: true, // default:false, !!! be careful
+  useEslintrc: true, // default:true
+  rules: {
+    // rules
+  }
+};
+```
+
+[more rules & fixable rules](http://eslint.org/docs/rules/)
 
 ## links
 fis3: [http://fis.baidu.com/](http://fis.baidu.com/)
