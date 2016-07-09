@@ -7,6 +7,7 @@ var linter = require('./');
 
 var testCode = '0 == 0';
 var rules = {
+  useEslintrc: false,
   rules: {
     'eqeqeq': 1
   }
