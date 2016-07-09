@@ -6,7 +6,7 @@ a js linter plugin of fis3 based on eslint
 [![npm](https://img.shields.io/npm/dm/fis3-lint-eslint-noisy.svg?style=flat-square)](https://www.npmjs.com/package/fis3-lint-eslint-noisy)
 
 ## about package name
-i called this package `noisy` is because the other eslint plugins for fis all silently failed when error report by eslint.
+i named this package `noisy` is because the other eslint plugins for fis all silently failed when error report by eslint.
 
 ## usage
 
