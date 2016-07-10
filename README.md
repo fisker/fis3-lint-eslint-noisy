@@ -23,6 +23,11 @@ fis.match('*.js', {
 ```
 
 ### options
+
+options: [http://eslint.org/docs/developer-guide/nodejs-api#cliengine]
+
+rules and fixable rules: [http://eslint.org/docs/rules/]
+
 ```
 var eslintConf = {
   configFile:
@@ -47,8 +52,6 @@ var eslintConf = {
   cwd:
 }; 
 ```
-options: [http://eslint.org/docs/developer-guide/nodejs-api#cliengine]
-rules and fixable rules: [http://eslint.org/docs/rules/]
 
 ## links
 fis3: [http://fis.baidu.com/]
