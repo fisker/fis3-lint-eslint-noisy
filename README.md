@@ -55,4 +55,5 @@ var eslintConf = {
 
 ## links
 fis3: [http://fis.baidu.com/]
-htmlhint: [http://eslint.org/]
+
+eslint: [http://eslint.org/]
