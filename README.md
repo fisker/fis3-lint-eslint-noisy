@@ -24,14 +24,15 @@ fis.match('*.js', {
 ```
 
 ## about eslintConf
-eslintConf will pass througth eslint `CLIEngine` constructor, available options are list here: [http://eslint.org/docs/developer-guide/nodejs-api#cliengine](http://eslint.org/docs/developer-guide/nodejs-api#cliengine)
+eslintConf will pass througth eslint `CLIEngine` constructor, available options are list here: [http://eslint.org/docs/developer-guide/nodejs-api#cliengine]
 
 this is changed in v0.2.0, by this change we can automatically fix some js codestyles by eslint.
 ```
 // fis-conf.js
 
 var exampleEslintConfToFixJs = {
-  fix: true, // default:false, !!! be careful
+  fix: true, // default:false, 
+             // !!! be careful, this might change your source code
   useEslintrc: true, // default:true
   rules: {
     // rules
@@ -42,5 +43,5 @@ var exampleEslintConfToFixJs = {
 [more rules & fixable rules](http://eslint.org/docs/rules/)
 
 ## links
-fis3: [http://fis.baidu.com/](http://fis.baidu.com/)
-htmlhint: [http://eslint.org/](http://eslint.org/)
+fis3: [http://fis.baidu.com/]
+htmlhint: [http://eslint.org/]
