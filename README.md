@@ -20,27 +20,35 @@ var eslintConf = {};
 fis.match('*.js', {
   lint: fis.plugin('eslint-noisy', eslintConf)
 });
-
 ```
 
-## about eslintConf
-eslintConf will pass througth eslint `CLIEngine` constructor, available options are list here: [http://eslint.org/docs/developer-guide/nodejs-api#cliengine]
-
-this is changed in v0.2.0, by this change we can automatically fix some js codestyles by eslint.
+### options
 ```
-// fis-conf.js
-
-var exampleEslintConfToFixJs = {
-  fix: true, // default:false, 
-             // !!! be careful, this might change your source code
-  useEslintrc: true, // default:true
-  rules: {
-    // rules
-  }
-};
+var eslintConf = {
+  configFile:
+  envs: // default: ['browser']
+  extensions: 
+  globals: 
+  fix: , // ❗!!! important !!!❗
+         // default:false,
+         // be careful, this might change your source code
+         // this will trigger `CLIEngine.outputFixes` automatically
+  ignore: 
+  ignorePath: 
+  ignorePattern:
+  baseConfig:  
+  rulePaths: 
+  rules: 
+  useEslintrc: // defalut: true
+  parser: 
+  cache: 
+  cacheFile: 
+  cacheLocation: 
+  cwd:
+}; 
 ```
-
-[more rules & fixable rules](http://eslint.org/docs/rules/)
+options: [http://eslint.org/docs/developer-guide/nodejs-api#cliengine]
+rules and fixable rules: [http://eslint.org/docs/rules/]
 
 ## links
 fis3: [http://fis.baidu.com/]
