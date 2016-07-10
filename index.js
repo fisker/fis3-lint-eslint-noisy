@@ -20,7 +20,7 @@ module.exports = function(content, file, conf){
   }
   var report = cli.executeOnText(content, file.realpath);
 
-  if (config.fix) {
+  if (conf.fix) {
     CLIEngine.outputFixes(report);
   }
 
