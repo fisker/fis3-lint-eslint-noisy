@@ -7,22 +7,20 @@
 
 var CLIEngine = require('eslint').CLIEngine;
 var formatter = CLIEngine.getFormatter();
-var assign = require('lodash.assign');
 var log = (global.fis && fis.log) || console;
 
 module.exports = function(content, file, conf){
   if (!content) {
     return;
   }
-  var config = assign({}, conf);
-  var cli = new CLIEngine(config);
+  var cli = new CLIEngine(conf);
 
   if (cli.isPathIgnored(file.realpath)) {
     return;
   }
   var report = cli.executeOnText(content, file.realpath);
 
-  if (config.fix) {
+  if (conf.fix) {
     CLIEngine.outputFixes(report);
   }
 
