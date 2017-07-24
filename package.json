@@ -1,6 +1,6 @@
 {
   "name": "fis3-lint-eslint-noisy",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "a js linter plugin of fis3 based on eslint",
   "main": "index.js",
   "repository": {
@@ -20,7 +20,7 @@
   "author": "fisker Cheung <lionkay@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "eslint": "^4.1.1"
+    "eslint": "^4.3.0"
   },
   "bugs": {
     "url": "https://github.com/fisker/fis3-lint-eslint-noisy/issues"
