@@ -3,41 +3,37 @@
  * fisker Cheung<lionkay@gmail.com>
  */
 
-'use strict';
+'use strict'
 
-var CLIEngine = require('eslint').CLIEngine;
-var formatter = CLIEngine.getFormatter();
-var log = (global.fis && fis.log) || console;
+var CLIEngine = require('eslint').CLIEngine
+var formatter = CLIEngine.getFormatter()
+var log = (global.fis && fis.log) || console
 
-module.exports = function(content, file, conf){
+module.exports = function(content, file, conf) {
   if (!content) {
-    return;
+    return
   }
-  var cli = new CLIEngine(conf);
+  var cli = new CLIEngine(conf)
 
   if (cli.isPathIgnored(file.realpath)) {
-    return;
+    return
   }
-  var report = cli.executeOnText(content, file.realpath);
+  var report = cli.executeOnText(content, file.realpath)
 
   if (conf.fix) {
-    CLIEngine.outputFixes(report);
+    CLIEngine.outputFixes(report)
   }
 
-  if (report.errorCount || report.warningCount ) {
-    log.warn(
-      '[%s] lint failed: \n %s',
-      file.id,
-      formatter(report.results)
-    );
+  if (report.errorCount || report.warningCount) {
+    log.warn('[%s] lint failed: \n %s', file.id, formatter(report.results))
     if (report.errorCount) {
-      process.exit(1);
+      process.exit(1)
     }
   }
-};
+}
 
 module.exports.defaultOptions = {
   envs: ['browser'],
   fix: false,
   useEslintrc: true
-};
+}
