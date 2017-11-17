@@ -1,4 +1,4 @@
-moved to https://github.com/fisker/fis3-plugins/tree/master/packages/fis3-lint-eslint-noisy
+# moved to https://github.com/fisker/fis3-plugins/tree/master/packages/fis3-lint-eslint-noisy
 
 
 # fis3-lint-eslint-noisy
