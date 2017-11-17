@@ -1,3 +1,6 @@
+moved to https://github.com/fisker/fis3-plugins/tree/master/packages/fis3-lint-eslint-noisy
+
+
 # fis3-lint-eslint-noisy
 a js linter plugin of fis3 based on eslint
 
